@@ -4,6 +4,7 @@
   "description": "adventure game with ejs",
   "main": "index.js",
   "scripts": {
+    "start": "npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Cody Bonsma",
