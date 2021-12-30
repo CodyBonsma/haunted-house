@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-comp">
+        <div class="speech-box sb1"> <% if(data === false){%>
+            <h5>Can't exit now? In quite the pickle aren't ya?</h5>
+            <%}else if (data === true){%>
+            <h5>hmmm, I know there's a bloke asleep somewhere. He has a key to exit</h5>
+            <%}%></div>
+       <a href="/entry/hintOne"><img id="old-man" src="../public/oldman.png"></a> 
+        <img id="entry-img" src="../public/entry.jpg">
+        <div class="move-options">
+            <a href="/entry/left">LEFT</a>
+            <a href="/entry/upstairs">UPSTAIRS</a>
+            <a href="/entry/right">RIGHT</a>
+        </div>     
+    </div>
+</body>
+</html>
