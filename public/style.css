@@ -1,5 +1,5 @@
 body {
-    background-color: aquamarine;
+    background-color: bisque;
 }
 
 .home-img {
@@ -127,4 +127,10 @@ body {
   .button2:hover {
     background-color: red;
     color: white;
+  }
+
+  img {
+      /* margin: 10px; */
+      /* border: 1px solid black; */
+      /* box-shadow: 10px 10px grey; */
   }
