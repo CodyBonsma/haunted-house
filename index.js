@@ -103,7 +103,7 @@ app.get('/entry/:direction', (req,res) => {
                 res.render('key');
                 break;
             case 'fridge': 
-                res.render('fridge');
+                res.render('fridge', {my_user: req.session.username});
                 break;
             case 'hallway':
                 res.render('hallway');

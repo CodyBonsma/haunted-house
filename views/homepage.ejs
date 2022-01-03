@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="sub-comp">
-        Welcome <%= my_user %>
+        <h3>Sign in to start</h3>
         <form action="/signup" method="POST">
-            <p><input type="text" name="username" placeholder="What is your username?"></p> 
-            <p><input type="password" name="password" placeholder="Create a password"></p>
-            <p><input type="submit" value="sign up!"></p>
+            <p><input type="text" name="username" placeholder="username"></p> 
+            <p><input type="password" name="password" placeholder="password"></p>
+            <p><button type="submit" class="button button1">sign in</button></p>
         </form>
 
         <% if (invalid_login) { %>

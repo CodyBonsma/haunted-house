@@ -1,5 +1,6 @@
 body {
     background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .home-img {
@@ -23,6 +24,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #key-pic {
