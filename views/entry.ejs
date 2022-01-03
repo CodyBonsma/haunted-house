@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="sub-comp">
+    <div class="main-comp">
         <div class="speech-box sb1"> <% if(data === false){%>
-            <h5>Can't exit now? In quite the pickle aren't ya?</h5>
+            <h5>Can't exit now? In quite the pickle aren't ya? I have a tip for you</h5>
             <%}else if (data === true){%>
             <h5>hmmm, I know there's a bloke asleep somewhere. He has a key to exit</h5>
             <%}%></div>
@@ -18,8 +18,8 @@
         <img id="entry-img" src="../public/entry.jpg">
         <div class="move-options">
             <a href="/entry/left"><button class="button button1">LEFT</button></a>
-            <a href="/entry/upstairs">UPSTAIRS</a>
-            <a href="/entry/right">RIGHT</a>
+            <a href="/entry/upstairs"><button class="button button1">UPSTAIRS</button></a>
+            <a href="/entry/right"><button class="button button1">RIGHT</button></a>
         </div>     
     </div>
 </body>

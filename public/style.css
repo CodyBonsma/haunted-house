@@ -38,6 +38,15 @@ body {
     position: relative;
 }
 
+#old-man-sub {
+    top: 160px;
+    left: 22%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 90px;
+    position: relative;
+}
+
 #entry-img {
     top: 0;
     left: 0;

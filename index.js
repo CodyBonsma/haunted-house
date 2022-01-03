@@ -48,6 +48,9 @@ app.get('/entry/:direction', (req,res) => {
         case 'fridge': 
             res.render('fridge');
             break;
+        case 'hallway':
+            res.render('hallway');
+            break;
     }
 
 });
