@@ -8,13 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="main-comp">
+    <div class="sub-comp">
         <div class="speech-box sb1"> <% if(data === false){%>
             <h5>Can't exit now? In quite the pickle aren't ya?</h5>
             <%}else if (data === true){%>
             <h5>hmmm, I know there's a bloke asleep somewhere. He has a key to exit</h5>
             <%}%></div>
-       <a href="/entry/hintOne"><img id="old-man" src="../public/oldman.png"></a> 
+       <a id="old-man" href="/entry/hintOne"><img id="old-man" src="../public/oldman.png"></a> 
         <img id="entry-img" src="../public/entry.jpg">
         <div class="move-options">
             <a href="/entry/left"><button class="button button1">LEFT</button></a>
