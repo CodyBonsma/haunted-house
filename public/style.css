@@ -69,30 +69,12 @@ body {
     left: 50px;
   }
 
-  /* .sb1:before {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-left: 10px solid #00bfb6;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #00bfb6;
-    border-bottom: 10px solid transparent;
-    right: -20px;
-    top: 200px;
-    z-index: 2;
-  } */
-
   .move-options {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin: 8px;
   }
-
-  /* a {
-      margin: 3px;
-  } */
 
   .button {
     border: none;
@@ -129,11 +111,9 @@ body {
     color: white;
   }
 
-  img {
-      /* margin: 10px; */
-      /* border: 1px solid black; */
-      /* box-shadow: 10px 10px grey; */
-  }
+ button {
+   margin-top: 10px;
+ }
 
   .error {
     background-color: red;

@@ -16,11 +16,6 @@ app.use(session({
 }));
 
 
-
-const text1 = false;
-const text2 = false;
-
-
 app.get('/', (req,res) => {
     let invalid_login = false;
     let url_reason = req.query.reason;
@@ -43,7 +38,6 @@ app.get('/home', (req,res) => {
         res.redirect('/');
     }
 });
-
 
 app.post('/signup', (req,res)=>{
     const valid_users = [
@@ -81,39 +75,44 @@ app.get('/entry', (req,res) => {
 
 // code for the entry point, using a switch case to decide which direction to go to
 app.get('/entry/:direction', (req,res) => {
-    const direction = req.params['direction'];
-    console.log("Player chooses to go: ", direction);
 
-    switch (direction){
-        case 'left':
-            res.render('left');
-            break;
-        case 'upstairs':
-            res.render('upstairs');
-            break;
-        case 'right':
-            res.render('right');
-            break;
-        case 'hintOne':
-            res.render('entry', {data: true});
-            break;
-        case 'mirror':
-            res.render('mirror');
-            break;
-        case 'couch':
-            res.render('couch');
-            break;
-        case 'key':
-            res.render('key');
-            break;
-        case 'fridge': 
-            res.render('fridge');
-            break;
-        case 'hallway':
-            res.render('hallway');
-            break;
+    if(req.session && req.session.username){
+        const direction = req.params['direction'];
+        console.log("Player chooses to go: ", direction);
+    
+        switch (direction){
+            case 'left':
+                res.render('left');
+                break;
+            case 'upstairs':
+                res.render('upstairs');
+                break;
+            case 'right':
+                res.render('right');
+                break;
+            case 'hintOne':
+                res.render('entry', {data: true, my_user: req.session.username});
+                break;
+            case 'mirror':
+                res.render('mirror');
+                break;
+            case 'couch':
+                res.render('couch');
+                break;
+            case 'key':
+                res.render('key');
+                break;
+            case 'fridge': 
+                res.render('fridge');
+                break;
+            case 'hallway':
+                res.render('hallway');
+                break;
+        }
+    } else {
+        res.redirect('/')
     }
-
+    
 });
 
 
