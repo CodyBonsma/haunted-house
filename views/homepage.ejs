@@ -9,10 +9,13 @@
 </head>
 <body>
     <div class="sub-comp">
-        <h3>Welcome <%= my_user %>, ready to take a tour?</h3>
-        <br/>
-        <img class="home-img" src="../public/house.jpg" >
-        <a href="/entry"><button class="button button1">ENTER</button></a>
+        Welcome <%= my_user %>
+        <form action="/signup" method="POST">
+            <p><input type="text" name="username" placeholder="What is your username?"></p> 
+            <p><input type="password" name="password" placeholder="Create a password"></p>
+            <p><input type="submit" value="sign up!"></p>
+        </form>
     </div>
+
 </body>
 </html>
