@@ -22,8 +22,13 @@ const text2 = false;
 
 
 app.get('/', (req,res) => {
+    let invalid_login = false;
+    let url_reason = req.query.reason;
+    if (url_reason == 'invalid_login'){
+        invalid_login = true;
+    }
     const session_username = req.session ? req.session.username : "no user set";
-    res.render('homepage', {my_user: session_username});
+    res.render('homepage', {my_user: session_username, invalid_login: invalid_login});
 });
 
 app.get('/homepage', (req,res) => {
@@ -37,7 +42,6 @@ app.get('/home', (req,res) => {
     } else {
         res.redirect('/');
     }
-    
 });
 
 
@@ -61,13 +65,18 @@ app.post('/signup', (req,res)=>{
         req.session.destroy(() => {
             console.log('user reset')
         });
-        res.redirect('/');
+        res.redirect('/?reason=invalid_login');
     }
 
   });
 
 app.get('/entry', (req,res) => {
-    res.render('entry', {data: false});
+    if (req.session && req.session.username){
+        const session_username = req.session ? req.session.username : "no user set";
+        res.render('entry', {data: false, my_user: session_username});
+    } else {
+        res.redirect('/');
+    }
 });
 
 // code for the entry point, using a switch case to decide which direction to go to

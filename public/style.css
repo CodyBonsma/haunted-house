@@ -134,3 +134,9 @@ body {
       /* border: 1px solid black; */
       /* box-shadow: 10px 10px grey; */
   }
+
+  .error {
+    background-color: red;
+    color: white;
+    padding: 10px;
+  }

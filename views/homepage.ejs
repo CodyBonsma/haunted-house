@@ -15,6 +15,12 @@
             <p><input type="password" name="password" placeholder="Create a password"></p>
             <p><input type="submit" value="sign up!"></p>
         </form>
+
+        <% if (invalid_login) { %>
+            <div class="error">
+                Invalid login.
+            </div>
+            <% } %>
     </div>
 
 </body>
